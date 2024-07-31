@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="card col-md-6 offset-3 mt-2">
+    <div class="card-header">New Saving Account</div>
+    <div class="card-body">
+      <form [formGroup]="newAccountFormGroup" (ngSubmit)="handleSaveaccounts()">
+        <div class="mb-3">
+          <label class="form-label">Balance:</label>
+          <input type="text" formControlName="balance" class="form-control">
+          <span class="text-danger"
+                *ngIf="newAccountFormGroup.controls['balance'].touched
+                && newAccountFormGroup.controls['balance'].errors
+                && newAccountFormGroup.controls['balance'].errors!['required']">
+            Balance is Required
+          </span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Interest Rate:</label>
+          <input type="text" formControlName="intrestRate" class="form-control">
+          <span class="text-danger"
+                *ngIf="newAccountFormGroup.controls['intrestRate'].touched
+                && newAccountFormGroup.controls['intrestRate'].errors
+                && newAccountFormGroup.controls['intrestRate'].errors!['required']">
+            Balance is Required
+          </span>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Customer Id</label>
+          <input type="text" formControlName="customerId" class="form-control">
+          <span class="text-danger"
+                *ngIf="newAccountFormGroup.controls['customer_Id'].touched
+                && newAccountFormGroup.controls['customerId'].errors
+                && newAccountFormGroup.controls['customerId'].errors!['required']">
+             customerId is Required
+          </span>
+        </div>
+        <button [disabled]="!newAccountFormGroup.valid" class="btn btn-info">Save</button>
+      </form>
+    </div>
+  </div>
+</div>

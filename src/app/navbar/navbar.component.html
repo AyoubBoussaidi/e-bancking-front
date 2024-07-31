@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+
+    <a class="navbar-brand" routerLink="/customers">Ebanking</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/customers">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"   role="button" data-bs-toggle="dropdown" aria-expanded="false">Accounts
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/accounts">Search accounts</a></li>
+            <li><a class="dropdown-item" routerLink="/new-account">New Current account</a></li>
+            <li><a class="dropdown-item" routerLink="/new-accounts">New Saving account</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Customers
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/customers">Search customers</a></li>
+            <li><a class="dropdown-item" routerLink="/new-customer">New customer</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
